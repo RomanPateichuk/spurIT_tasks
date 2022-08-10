@@ -13,7 +13,7 @@ const products = [
     img: './images/product2.jpg',
     count: 50,
     isAvailable: true,
-    tags: [],
+    tags: ['last'],
   },
   {
     name: 'Апельсиновый сок',
@@ -21,7 +21,7 @@ const products = [
     description: 'Он придётся по душе, даже если ты слива лиловая, спелая, садовая.',
     count: 0,
     isAvailable: false,
-    tags: [],
+    tags: ['new'],
 
   },
 ]
@@ -35,7 +35,7 @@ class ProductTemplate {
     this.count = product.count;
     this.tags = product.tags;
     this.isAvailable = product.isAvailable;
-    this.template = document.createElement("div")
+    this.template = document.createElement("div");
     this.template.classList.add('product');
   }
 
