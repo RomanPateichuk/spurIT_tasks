@@ -1,6 +1,9 @@
-let element = document.querySelector(".collapsible__content > p").animate([
+let element = document.querySelector(".collapsible__content")
+
+
+let animation = element.animate([
   { transform: 'scale(1)', opacity: 1 },
-  { transform: 'scale(.6)', opacity: 0 }
+  { transform: 'scale(.6)', opacity: 0 },
 ], {
   duration: 700,
   easing: 'ease-in-out',
@@ -10,7 +13,10 @@ let element = document.querySelector(".collapsible__content > p").animate([
   fill: 'forwards'
 })
 
-element.pause();
+console.log('element: ', element);
+
+
+animation.pause();
 
 const btns_wrapper = document.getElementsByClassName("collapsible__button")[0];
 const closeBtn = document.querySelector(".collapsible__action--visible");
@@ -30,12 +36,18 @@ btns_wrapper.addEventListener("click", (event) => {
 
 
 function playAnimation(rate, btn, activeted) {
-  element.playbackRate = rate;
-  element.play();
-  element.finished.then(() => {
+  if (element.style.display === 'none') {
+    element.style.display = 'block';
+  }
+
+  animation.playbackRate = rate;
+  animation.play();
+  animation.finished.then(() => {
     btn.style.pointerEvents = 'none';
     activeted.style.pointerEvents = 'auto';
+    element.style.display = (rate === -1) ? 'block' : 'none';
   })
+
 }
 
 
