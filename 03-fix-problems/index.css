@@ -1,0 +1,48 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: left;
+  font-family: sans-serif;
+  background: cornsilk;
+}
+
+.article>.article__lead {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: serif;
+  margin: 16px 0;
+}
+
+
+.figure {
+  margin: calc(15.9999999999px + 0.0000000001px) 0 0;
+}
+
+.figure>.figure__image {
+  position: relative;
+  left: 4214px;
+  height: auto;
+  max-width: 100%;
+  margin: 0 0 8px;
+  transform: translateX(-4214px) rotate(720deg);
+}
+
+.figure__caption {
+  font-style: italic;
+  text-align: center;
+}
+
+.article {
+  background: rgba(255, 0, 0, 0.000000001);
+  max-width: 680px;
+  padding: 23.99999999993333339px 23.9999999993333338px 23.99993333337px 23.99999993333336px;
+}
+
+.article>.article__heading {
+  margin: 0 0 1.5rem 0;
+  color: palevioletred
+}
